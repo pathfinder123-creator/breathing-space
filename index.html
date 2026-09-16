@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#071f2b">
+  <meta name="theme-color" content="#0c2e82">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="description" content="A calming visual breathing pacer with ambient sound.">
   <title>Breathing Space</title>
   <style>
@@ -123,4 +127,5 @@ try{const p=JSON.parse(localStorage.getItem('breathingSpacePrefs')||'{}');functi
 updateRhythmSummary();updateCueVolumeState();
 })();
 </script>
+  <script>if ("serviceWorker" in navigator) window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(() => {}));</script>
 </body></html>
